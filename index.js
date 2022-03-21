@@ -9,7 +9,12 @@ const morgan = require('morgan');
 
 dotenv.config();
 
-//pengecekan koneksi server backend
+// memasang koneksi ke mongoDB
+mongoose.connect(process.env.MONGO_URL, { useNewParser: true, useUnifiedTopology: true }, () => {
+    console.log('Terkoneksi ke MongoDB')
+});
+
+// pengecekan koneksi server backend
 app.listen(8800, () => {
     console.log('Backend server berjalan di port 8800');
 });
