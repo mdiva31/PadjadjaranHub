@@ -7,12 +7,26 @@ const dotenv = require('dotenv');
 const helmet = require('helmet');
 const morgan = require('morgan');
 
+// pemanggilan path untuk route
+const userRoute = require("./routes/users");
+const authRoute = require("./routes/auth");
+
 dotenv.config();
 
 // memasang koneksi ke mongoDB
-mongoose.connect(process.env.MONGO_URL, { useNewParser: true, useUnifiedTopology: true }, () => {
-    console.log('Terkoneksi ke MongoDB')
-});
+mongoose
+  .connect(process.env.MONGO_URL)
+  .then(() => console.log("Database MongoDB Terkoneksi"))
+  .catch(err => console.log(err));
+
+// middleware
+app.use(express.json());
+app.use(helmet());
+app.use(morgan("common"));
+
+// routing
+app.use("/api/auth", authRoute);
+app.use("/api/users", userRoute);
 
 // pengecekan koneksi server backend
 app.listen(8800, () => {
