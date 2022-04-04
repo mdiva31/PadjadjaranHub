@@ -10,6 +10,7 @@ const morgan = require('morgan');
 // pemanggilan path untuk route
 const userRoute = require("./routes/users");
 const authRoute = require("./routes/auth");
+const postRoute = require("./routes/posts");
 
 dotenv.config();
 
@@ -27,6 +28,7 @@ app.use(morgan("common"));
 // routing
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
+app.use("/api/posts", postRoute);
 
 // pengecekan koneksi server backend
 app.listen(8800, () => {
