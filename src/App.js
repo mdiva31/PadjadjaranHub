@@ -22,6 +22,10 @@ function App() {
           <Login />
         </Route>
 
+        <Route path="/profile">
+          <Profile />
+        </Route>
+
         <Route path="/register">
           <Register />
         </Route>
