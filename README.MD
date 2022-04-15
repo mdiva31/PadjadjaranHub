@@ -1,3 +1,2 @@
-Pastikan sudah menginstal NPM, dan lakukan command berikut:
-1. npm init
-2. yarn add express mongoose dotenv helmet morgan nodemon bcrypt
+1. Install module dengan 'NPM Install'
+2. .Env file by request
