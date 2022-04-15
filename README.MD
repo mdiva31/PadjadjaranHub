@@ -1,2 +1,5 @@
-1. Install module dengan 'NPM Install'
-2. .Env file by request
+1. Install module dengan
+2. ```bash
+npm install 
+```
+3. .Env file by request
