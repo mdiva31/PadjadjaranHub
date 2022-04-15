@@ -1,1 +1,4 @@
-modulenya di install sendiri ya pake npm install
+1. Install module dengan
+```
+npm install 
+```
