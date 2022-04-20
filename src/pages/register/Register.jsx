@@ -27,7 +27,7 @@ export default function Register() {
       };
       try {
         await axios.post("/auth/register", user);
-        //jika data berhasil masuk, masuk ke menu login
+        //jika data berhasil masuk, masuk ke menu register
         history.push("/login");
       } catch (err) {
         console.log(err);
@@ -36,34 +36,34 @@ export default function Register() {
   };
 
   return (
-    <div className="login">
-      <div className="loginWrapper">
-        <div className="loginLeft">
-          <span className="loginDesc1">Lets</span>
-          <span className="loginDesc2">Connect.</span>
+    <div className="register">
+      <div className="registerWrapper">
+        <div className="registerLeft">
+          <span className="registerDesc1">Lets</span>
+          <span className="registerDesc2">Connect.</span>
         </div>
-        <div className="loginRight">
-        <img src="./assets/logo.png" className="loginLogo"/>
-          <h2 className="loginDesc3">Register</h2>
-          <form className="loginBox" onSubmit={handleClick}>
+        <div className="registerRight">
+        <img src="./assets/logo.png" className="registerLogo"/>
+          <h2 className="registerDesc3">Register</h2>
+          <form className="registerBox" onSubmit={handleClick}>
             <input
               placeholder="Username"
               required
               ref={username}
-              className="loginInput"
+              className="registerInput"
             />
             <input
               placeholder="Email"
               required
               ref={email}
-              className="loginInput"
+              className="registerInput"
               type="email"
             />
             <input
               placeholder="Password"
               required
               ref={password}
-              className="loginInput"
+              className="registerInput"
               type="password"
               minLength="6"
             />
@@ -71,16 +71,16 @@ export default function Register() {
               placeholder="Password Again"
               required
               ref={passwordLagi}
-              className="loginInput"
+              className="registerInput"
               type="password"
               minLength="6"
             />
-            <button className="loginButton" type="submit">
+            <button className="registerButton" type="submit">
               Sign Up
             </button>
             <div className="desc1">
               sudah punya akun?
-              <button className="toLoginrButton">Log in</button>
+              <button className="toLoginButton">Log in</button>
             </div>
           </form>
         </div>
