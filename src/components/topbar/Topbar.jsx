@@ -1,11 +1,28 @@
 import "./topbar.css";
 import { Search, Person, Chat, Notifications } from "@material-ui/icons";
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
+// import {logoutCall} from "../../apiCalls";
 
 export default function Topbar() {
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+  const { user } = useContext(AuthContext);
+
+  //fungsi logout
+  // const handleClick = () => {
+  //   logoutCall(
+  //     dispatch
+  //   );
+  // }
+
+
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
-      <img src="/assets/logo2.png" alt="" className="logo"/>
+        <Link to="/">
+          <img src="/assets/logo2.png" alt="PadjadjaranHub" className="topbarLogo" />
+        </Link>
       </div>
       <div className="topbarCenter">
         <div className="searchbar">
@@ -35,7 +52,18 @@ export default function Topbar() {
             <span className="topbarIconBadge">1</span>
           </div>
         </div>
-        <img src="/assets/person/1.png" alt="" className="topbarImg"/>
+        <Link to={`/profile/${user.username}`}>
+          <img
+            src={
+              user.profilePicture
+                ? PF + user.profilePicture
+                : PF + "person/noAvatar.png"
+            }
+            alt="foto-profil"
+            className="topbarImg"
+          />
+        </Link>
+        {<span className="topbarLink" onClick={handleClick}>Sign out</span>}
       </div>
     </div>
   );

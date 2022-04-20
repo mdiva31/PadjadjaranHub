@@ -36,12 +36,12 @@
 }
 
 .loginLogo {
-  font-size: 50px;
-  font-weight: 800;
+  width: 20vw;
+  height: 10vh;
   color: #000000;
-  margin-top: -130px;
+  margin-top: -160px;
   margin-bottom: 100px;
-  text-align: center;
+  align-self: center;
 }
 
 .loginDesc1 {
@@ -97,10 +97,11 @@
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
+    transition: all .5s ease;
 }
 
 
-.loginRegisterButton{
+.toRegisterButton{
     width: 50%;
     height: 20px;
     align-self: baseline;

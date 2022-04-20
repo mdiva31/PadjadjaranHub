@@ -29,7 +29,16 @@
 .sidebarListItem {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  padding: 10px 0px 10px 0px;
+  border-radius: 10px;
+
+}
+.sidebarListItem:hover {
+  display: flex;
+  background-color: orange;
+  align-items: center;
+  padding: 10px 0px 10px 0px;
+  border-radius: 10px;
 }
 
 .sidebarIcon {
