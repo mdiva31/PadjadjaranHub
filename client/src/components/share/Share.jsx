@@ -11,19 +11,28 @@ export default function Share() {
   const [file, setFile] = useState(null);
 
   // fungsi untuk memposting foto
-  const submitHandler = async (e) =>{
-    e.preventDefault()
-    const newPost ={
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    const newPost = {
       userId: user._id,
       desc: desc.current.value,
+    };
+    if (file) {
+      const data = new FormData();
+      const fileName = Date.now() + file.name;
+      data.append("name", fileName);
+      data.append("file", file);
+      newPost.img = fileName;
+      console.log(newPost);
+      try {
+        await axios.post("/upload", data);
+      } catch (err) {}
     }
-    try{
-      await axios.post("/posts", newPost)
-    } catch(err){
-      
-    }
-
-  }
+    try {
+      await axios.post("/posts", newPost);
+      window.location.reload()
+    } catch (err) {}
+  };
   return (
     <div className="share">
       <div className="shareWrapper">
@@ -70,7 +79,9 @@ export default function Share() {
               <span className="shareOptionText">Feelings</span>
             </div>
           </div>
-          <button className="shareButton" type="submit">Post</button>
+          <button className="shareButton" type="submit">
+            Post
+          </button>
         </form>
       </div>
     </div>

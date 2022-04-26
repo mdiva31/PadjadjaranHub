@@ -51,8 +51,28 @@ router.get("/", async (req, res) => {
     const user = userId
       ? await User.findById(userId)
       : await User.findOne({ username: username });
-    const { password, updateAt, ...other } = user._doc;
+    const { password, updatedAt, ...other } = user._doc;
     res.status(200).json(other);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// mendapatkan list teman
+router.get("/friends/:userId", async (req, res) => {
+  try {
+    const user = await User.findById(req.params.userId);
+    const friends = await Promise.all(
+      user.followings.map((friendId) => {
+        return User.findById(friendId);
+      })
+    );
+    let friendsList = [];
+    friends.map((friend) => {
+      const { _id, username, profilePicture } = friend;
+      friendsList.push({ _id, username, profilePicture });
+    });
+    res.status(200).json(friendsList);
   } catch (err) {
     res.status(500).json(err);
   }

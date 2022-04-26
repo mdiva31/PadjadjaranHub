@@ -11,6 +11,6 @@ export const loginCall = async (userCredential, dispatch) => {
   }
 };
 
-// export const logoutCall = async (dispatch) => {
-//   dispatch({ type: "LOGOUT" });
-// };
+export const logoutCall = async (dispatch) => {
+  dispatch({ type: "LOGOUT" });
+};
