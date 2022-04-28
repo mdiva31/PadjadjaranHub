@@ -1,8 +1,7 @@
 import "./register.css";
 import { useRef } from "react";
 import axios from "axios";
-import  {useHistory} from 'react-router-dom'
-
+import { useHistory, Link } from "react-router-dom";
 
 export default function Register() {
   // variabel yang dipakai untuk Hook
@@ -80,7 +79,9 @@ export default function Register() {
             </button>
             <div className="desc1">
               sudah punya akun?
-              <button className="loginRegisterButton">Log in</button>
+              <Link to={`/login`}>
+                <button className="loginRegisterButton">Log in</button>
+              </Link>
             </div>
           </form>
         </div>

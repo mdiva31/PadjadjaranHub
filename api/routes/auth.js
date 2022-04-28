@@ -35,8 +35,8 @@ router.post("/login", async (req, res) => {
         !user && res.status(400).json("User tidak ditemukan");
 
         // mengecek kesesuaian password
-        const validPassword = await bcrypt.compare(req.body.password, user.password);
-        !validPassword && res.status(400).json("Password salah");
+        const validPassword = await bcrypt.compare(req.body.password, user.password)
+        !validPassword && res.status(400).json("Password salah")
 
         //jika email dan password benar
         res.status(200).json(user);

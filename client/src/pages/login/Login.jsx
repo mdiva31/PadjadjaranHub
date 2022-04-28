@@ -3,6 +3,7 @@ import { useContext, useRef } from "react";
 import { loginCall } from "../../apiCalls";
 import { AuthContext } from "../../context/AuthContext";
 import { CircularProgress } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   // variabel yang dipakai utk useRef
@@ -56,12 +57,16 @@ export default function Login() {
               )}
             </button>
             <div className="desc1">
-              Belum Punya Akun? 
-              <button className="loginRegisterButton">{isFetching ? (
-                <CircularProgress color="inherit" size="20px" />
-              ) : (
-                "Buat Akun Baru"
-              )}</button>
+              Belum Punya Akun?
+              <Link to={`/register`}>
+                <button className="loginRegisterButton">
+                  {isFetching ? (
+                    <CircularProgress color="inherit" size="20px" />
+                  ) : (
+                    "Buat Akun Baru"
+                  )}
+                </button>
+              </Link>
             </div>
           </form>
         </div>
