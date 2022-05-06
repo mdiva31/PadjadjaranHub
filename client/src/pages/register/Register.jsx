@@ -38,12 +38,12 @@ export default function Register() {
     <div className="login">
       <div className="loginWrapper">
         <div className="loginLeft">
-          <span className="loginDesc1">Lets</span>
-          <span className="loginDesc2">Connect.</span>
+          <span className="loginDesc1">Mari </span>
+          <span className="loginDesc2"> Terkoneksi.</span>
         </div>
         <div className="loginRight">
           <h3 className="loginLogo">PadjadjaranHub</h3>
-          <h2 className="loginDesc3">Register</h2>
+          {/* <h2 className="loginDesc3">Daftar</h2> */}
           <form className="loginBox" onSubmit={handleClick}>
             <input
               placeholder="Username"
@@ -67,7 +67,7 @@ export default function Register() {
               minLength="6"
             />
             <input
-              placeholder="Password Again"
+              placeholder="Masukan Password Lagi"
               required
               ref={passwordLagi}
               className="loginInput"
@@ -75,12 +75,13 @@ export default function Register() {
               minLength="6"
             />
             <button className="loginButton" type="submit">
-              Sign Up
+              Daftar
             </button>
             <div className="desc1">
-              sudah punya akun?
+              Sudah punya akun?
+              <br></br>
               <Link to={`/login`}>
-                <button className="loginRegisterButton">Log in</button>
+                <button className="loginRegisterButton">Masuk</button>
               </Link>
             </div>
           </form>
