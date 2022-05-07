@@ -26,20 +26,7 @@ app.use("/images", express.static(path.join(__dirname, "public/images")));
 
 // middleware
 app.use(express.json());
-app.use(
-  helmet.contentSecurityPolicy({
-    directives: {
-      defaultSrc: [],
-      connectSrc: ["'self'", ...connectSrcUrls],
-      scriptSrc: ["'self'", ...scriptSrcUrls],
-      styleSrc: ["'self'", "'unsafe-inline'", ...styleSrcUrls],
-      workerSrc: ["'self'", 'blob:'],
-      objectSrc: [],
-      imgSrc: ["'self'", 'blob:', 'data:'],
-      fontSrc: ["'self'", ...fontSrcUrls],
-    },
-  })
-);
+app.use(helmet.ContentSecurityPolicy());
 app.use(morgan("common"));
 
 // destinasi dari upload file
