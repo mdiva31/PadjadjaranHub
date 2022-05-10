@@ -35,6 +35,7 @@ export default function Landing() {
           <img src="/assets/logo.png" alt="" className="img" />
         </div>
       </div>
+     
       <div className="footer">
         <p className="footerDesc">Trio Sekawan + Thariq <br></br>Proyek Perangkat Lunak I 2022</p>
       </div>
