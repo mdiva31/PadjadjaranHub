@@ -1,8 +1,7 @@
 import "./register.css";
 import { useRef } from "react";
 import axios from "axios";
-import  {useHistory} from 'react-router-dom'
-
+import { useHistory, Link } from "react-router-dom";
 
 export default function Register() {
   // variabel yang dipakai untuk Hook
@@ -27,7 +26,7 @@ export default function Register() {
       };
       try {
         await axios.post("/auth/register", user);
-        //jika data berhasil masuk, masuk ke menu register
+        //jika data berhasil masuk, masuk ke menu login
         history.push("/login");
       } catch (err) {
         console.log(err);
@@ -36,51 +35,54 @@ export default function Register() {
   };
 
   return (
-    <div className="register">
-      <div className="registerWrapper">
-        <div className="registerLeft">
-          <span className="registerDesc1">Lets</span>
-          <span className="registerDesc2">Connect.</span>
+    <div className="login">
+      <div className="loginWrapper">
+        <div className="loginLeft">
+          <span className="loginDesc1">Mari </span>
+          <span className="loginDesc2"> Terkoneksi.</span>
         </div>
-        <div className="registerRight">
-        <img src="./assets/logo.png" className="registerLogo"/>
-          <h2 className="registerDesc3">Register</h2>
-          <form className="registerBox" onSubmit={handleClick}>
+        <div className="loginRight">
+          <h3 className="loginLogo">PadjadjaranHub</h3>
+          {/* <h2 className="loginDesc3">Daftar</h2> */}
+          <form className="loginBox" onSubmit={handleClick}>
             <input
               placeholder="Username"
               required
               ref={username}
-              className="registerInput"
+              className="loginInput"
             />
             <input
               placeholder="Email"
               required
               ref={email}
-              className="registerInput"
+              className="loginInput"
               type="email"
             />
             <input
               placeholder="Password"
               required
               ref={password}
-              className="registerInput"
+              className="loginInput"
               type="password"
               minLength="6"
             />
             <input
-              placeholder="Password Again"
+              placeholder="Masukan Password Lagi"
               required
               ref={passwordLagi}
-              className="registerInput"
+              className="loginInput"
               type="password"
               minLength="6"
             />
-            <button className="registerButton" type="submit">
-              Sign Up
+            <button className="loginButton" type="submit">
+              Daftar
             </button>
             <div className="desc1">
-              sudah punya akun?
-              <button className="toLoginButton">Log in</button>
+              Sudah punya akun?
+              <br></br>
+              <Link to={`/login`}>
+                <button className="loginRegisterButton">Masuk</button>
+              </Link>
             </div>
           </form>
         </div>

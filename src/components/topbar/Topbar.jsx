@@ -3,25 +3,26 @@ import { Search, Person, Chat, Notifications } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
-// import {logoutCall} from "../../apiCalls";
+import {logoutCall} from "../../apiCalls";
 
 export default function Topbar() {
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
-  const { user } = useContext(AuthContext);
+  const { user, dispatch } = useContext(AuthContext);
 
   //fungsi logout
-  // const handleClick = () => {
-  //   logoutCall(
-  //     dispatch
-  //   );
-  // }
+  const handleClick = () => {
+    logoutCall(
+      dispatch
+    );
+  window.location.reload()
+  }
 
 
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
         <Link to="/">
-          <img src="/assets/logo2.png" alt="PadjadjaranHub" className="topbarLogo" />
+          <img src="/assets/logo2.png" alt="PadjadjaranHub" className="logo" />
         </Link>
       </div>
       <div className="topbarCenter">
@@ -63,7 +64,7 @@ export default function Topbar() {
             className="topbarImg"
           />
         </Link>
-        {<span className="topbarLink" onClick={handleClick}>Sign out</span>}
+        <span className="topbarLink" onClick={handleClick}>Sign out</span>
       </div>
     </div>
   );

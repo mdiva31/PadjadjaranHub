@@ -3,6 +3,7 @@ import { useContext, useRef } from "react";
 import { loginCall } from "../../apiCalls";
 import { AuthContext } from "../../context/AuthContext";
 import { CircularProgress } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   // variabel yang dipakai utk useRef
@@ -10,7 +11,7 @@ export default function Login() {
   const password = useRef();
 
   // fethcing data dari AuthContext
-  const { user, isFetching, dispatch } = useContext(AuthContext);
+  const {isFetching, dispatch } = useContext(AuthContext);
 
   // handleClik untuk login
   const handleClick = (e) => {
@@ -21,18 +22,17 @@ export default function Login() {
     );
   };
 
-  console.log(user);
   return (
     <div className="login">
       <div className="loginWrapper">
         <div className="loginLeft">
-          <span className="loginDesc1"> Lets </span>
-          <span className="loginDesc2"> Connect. </span>
+          <span className="loginDesc1">Mari</span>
+          <span className="loginDesc2">Terkoneksi.</span>
         </div>
         <div className="loginRight">
-        <img src="./assets/logo.png" className="loginLogo"/>
-          <h2 className="loginDesc3">Login</h2>
-          <form className="loginBox" onSubmit={handleClick}>
+          <h3 className="loginLogo1">PadjadjaranHub</h3>
+          {/* <h2 className="loginDesc3">Login</h2> */}
+          <form className="loginBox1" onSubmit={handleClick}>
             <input
               placeholder="Email"
               required
@@ -56,12 +56,17 @@ export default function Login() {
               )}
             </button>
             <div className="desc1">
-              Belum Punya Akun? 
-              <button className="toRegisterButton">{isFetching ? (
-                <CircularProgress color="inherit" size="20px" />
-              ) : (
-                "Buat Akun Baru"
-              )}</button>
+              Belum Punya Akun?
+              <br></br>
+              <Link to={`/register`}>
+                <button className="loginRegisterButton">
+                  {isFetching ? (
+                    <CircularProgress color="inherit" size="20px" />
+                  ) : (
+                    "Buat Akun Baru"
+                  )}
+                </button>
+              </Link>
             </div>
           </form>
         </div>
