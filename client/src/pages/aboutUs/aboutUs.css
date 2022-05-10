@@ -18,19 +18,25 @@ td {
   z-index: 999;
 }
 
-.logo {
-    margin-left: 30px;
-    max-width: 200px;
-    max-height: 80px;
+.logoTopbar {
+  margin-left: 30px;
+  max-width: 120px;
+  max-height: 45px;
+  cursor: pointer;
+}
+
+  .logoLanding {
+    max-width: 20vw;
+    max-height: 20vh;
     margin-top: 10px;
-    cursor: pointer;
+    pointer-events: none;
   }
 
   .imgAboutus{
     display: flex;
     max-width: 200px;
     max-height: 450px;
-    margin-left: 20%;
+    margin-left: 30%;
   
   }
   .grid-container {
@@ -45,14 +51,17 @@ td {
     background-color: rgba(255, 255, 255, 0.8);
     
     padding: 10px 0;
-    font-size: 15px;
     font-weight: bold;
     text-align: center;
   }
 .titleAboutus{
-  font-size: 40px;
+  font-size: 50px;
   text-align: center;
   font-weight: bold;
   margin-bottom: 30px;
   margin-top: 30px;
+}
+
+.titleOrang{
+  font-size : 30px;
 }

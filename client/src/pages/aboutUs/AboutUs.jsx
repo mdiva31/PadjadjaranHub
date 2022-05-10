@@ -1,13 +1,19 @@
-import "./aboutUs.css"
-export default function AboutUs() {
+import "./aboutus.css"
+import { Link } from "react-router-dom";
+export default function aboutUs() {
   return (
-    <>
-          <div className="titleAboutus">OUR Team</div>
+   <> 
+   <Link to="/">
+    <img src="/assets/logo.png" alt="" className="logoLanding" />
+    </Link>
+  
+    <br></br><br></br>
+          <div className="titleAboutus">OUR Team</div><br/> <br/> <br/>
 <div className="grid-container">
-  <div>Project Manager</div>
-  <div>UI/UX Designer</div>
-  <div>FrontEnd</div>
-  <div>BackEnd</div>
+  <div className="titleOrang">Project Manager</div>
+  <div className="titleOrang">UI/UX Designer</div>
+  <div className="titleOrang">FrontEnd</div>
+  <div className="titleOrang">BackEnd</div>
   <div><img src="/assets/22.jpg" alt="" className="imgAboutus"/> </div>
   <div><img src="/assets/74.jpg" alt="" className="imgAboutus"/></div>
   <div><img src="/assets/30.jpg" alt="" className="imgAboutus"/></div>  
