@@ -51,14 +51,13 @@ export default function Rightbar({ user }) {
         <div className="birthdayContainer">
           <img className="birthdayImg" src="assets/gift.png" alt="" />
           <span className="birthdayText">
-            <b>Join Siantarman</b> dan <b>1 other friends</b> have a birhday
-            today.
+            <b>Muhammad Faishal</b> dan <b>1 teman lainnya</b> merayakan ulang tahun minggu ini
           </span>
         </div>
-        <img className="rightbarAd" src="assets/ads.png" alt="" />
-        <h4 className="rightbarTitle">Online Friends</h4>
+        <img className="rightbarAd" src="assets/ads.jpg" alt="" />
+        <h4 className="rightbarTitle">Teman yang sedang aktif</h4>
         <ul className="rightbarFriendList">
-          {Users.map((u) => (
+          {Users.slice(0, 3).map((u) => (
             <Online key={u.id} user={u} />
           ))}
         </ul>
@@ -75,18 +74,18 @@ export default function Rightbar({ user }) {
             {followed ? <Remove /> : <Add />}
           </button>
         )}
-        <h4 className="rightbarTitle">User information</h4>
+        <h4 className="rightbarTitle">Informasi Akun</h4>
         <div className="rightbarInfo">
           <div className="rightbarInfoItem">
-            <span className="rightbarInfoKey">City:</span>
+            <span className="rightbarInfoKey">Kota:</span>
             <span className="rightbarInfoValue">{user.city}</span>
           </div>
           <div className="rightbarInfoItem">
-            <span className="rightbarInfoKey">From:</span>
+            <span className="rightbarInfoKey">Asal:</span>
             <span className="rightbarInfoValue">{user.from}</span>
           </div>
           <div className="rightbarInfoItem">
-            <span className="rightbarInfoKey">Relationship:</span>
+            <span className="rightbarInfoKey">Hubungan:</span>
             <span className="rightbarInfoValue">
               {user.relationship === 1
                 ? "Lajang"
@@ -96,7 +95,7 @@ export default function Rightbar({ user }) {
             </span>
           </div>
         </div>
-        <h4 className="rightbarTitle">User friends</h4>
+        <h4 className="rightbarTitle">Teman Pengguna</h4>
         <div className="rightbarFollowings">
           {friends.map((friend) => (
             <Link

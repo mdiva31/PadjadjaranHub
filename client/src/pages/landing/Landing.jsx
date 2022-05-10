@@ -5,7 +5,7 @@ export default function Landing() {
     <>
       <div className="nav">
         <div className="navLeft">
-          <img src="/assets/logo.png" alt="" className="logo" />
+          <img src="/assets/logo.png" alt="" className="logo2" />
         </div>
         <div className="navRight">
           <Link to={`/register`}>
@@ -35,7 +35,6 @@ export default function Landing() {
           <img src="/assets/logo.png" alt="" className="img" />
         </div>
       </div>
-     
       <div className="footer">
         <p className="footerDesc">Trio Sekawan + Thariq <br></br>Proyek Perangkat Lunak I 2022</p>
       </div>

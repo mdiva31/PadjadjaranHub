@@ -30,17 +30,16 @@
   margin-top: 10px;
 }
 .footer {
-  position: fixed;
-  bottom: 0;
-  width: 100vw;
+  margin-top: 92px;
   height: 50px;
   background-color: orange;
 }
-.logo {
+.logo2 {
   max-width: 120px;
   max-height: 50px;
   margin-top: 10px;
   pointer-events: none;
+  margin-left: 25px;
 }
 .join {
   margin-top: 10px;

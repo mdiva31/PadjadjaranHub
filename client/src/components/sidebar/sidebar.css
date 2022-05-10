@@ -29,16 +29,11 @@
 .sidebarListItem {
   display: flex;
   align-items: center;
-  padding: 10px 0px 10px 0px;
-  border-radius: 10px;
-
+  margin-bottom: 20px;
 }
-.sidebarListItem:hover {
-  display: flex;
-  background-color: orange;
-  align-items: center;
-  padding: 10px 0px 10px 0px;
-  border-radius: 10px;
+
+.sidebarIcon {
+  margin-right: 15px;
 }
 
 .sidebarButton {
@@ -59,4 +54,6 @@
   list-style: none;
 }
 
-
+.rightbarTitle {
+  margin-bottom: 20px;
+}

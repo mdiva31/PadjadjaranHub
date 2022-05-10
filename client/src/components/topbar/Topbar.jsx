@@ -22,7 +22,7 @@ export default function Topbar() {
     <div className="topbarContainer">
       <div className="topbarLeft">
         <Link to="/">
-          <img src="/assets/logo2.png" alt="PadjadjaranHub" className="logo" />
+          <img src="/assets/logo2.png" alt="PadjadjaranHub" className="logoTopbar" />
         </Link>
       </div>
       <div className="topbarCenter">
@@ -36,7 +36,7 @@ export default function Topbar() {
       </div>
       <div className="topbarRight">
         <div className="topbarLinks">
-          <span className="topbarLink">Homepage</span>
+          <span className="topbarLink">Beranda</span>
           <span className="topbarLink">Timeline</span>
         </div>
         <div className="topbarIcons">
@@ -64,7 +64,7 @@ export default function Topbar() {
             className="topbarImg"
           />
         </Link>
-        <span className="topbarLink" onClick={handleClick}>Sign out</span>
+        <span className="topbarLink" onClick={handleClick}>Keluar</span>
       </div>
     </div>
   );
