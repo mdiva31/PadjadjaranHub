@@ -32,7 +32,7 @@ export default function Landing() {
           </Link>
         </div>
         <div className="landingRight">
-          <img src="/assets/logo.png" alt="" className="img" />
+          <img src="/assets/vector_design.png" alt="" className="img" />
         </div>
       </div>
       <div className="footer">
