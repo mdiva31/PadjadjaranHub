@@ -1,37 +1,37 @@
 export const Users = [
   {
     id:1,
-    profilePicture: "person/1.PNG",
+    profilePicture: "person/74.jpg",
     username: "Fahrul Thariq",
   },
   {
     id:2,
-    profilePicture: "person/2.png",
+    profilePicture: "person/38.jpg",
     username: "Leonardo Dwigantoro",
   },
   {
     id:3,
-    profilePicture: "person/3.png",
+    profilePicture: "person/28.jpg",
     username: "Robby Sobari",
   },
   {
     id:4,
-    profilePicture: "person/4.png",
+    profilePicture: "person/36.jpg",
     username: "Muhammad Luthfi ",
   },
   {
     id:5,
-    profilePicture: "person/5.png",
+    profilePicture: "person/50.jpg",
     username: "Elshandi",
   },
   {
     id:6,
-    profilePicture: "person/6.png",
+    profilePicture: "person/16.jpg",
     username: "Muhammad Faishal",
   },
   {
     id:7,
-    profilePicture: "person/7.png",
+    profilePicture: "person/20.jpg",
     username: "Join Valentino",
   },
 
