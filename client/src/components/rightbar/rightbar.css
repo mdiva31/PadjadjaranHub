@@ -96,6 +96,6 @@
   font-weight: 500;
   cursor: pointer;
 }
-.rightFollowButton:focus{
+.rightFollowButton:focus {
   outline: none;
 }
