@@ -3,6 +3,7 @@ import Login from "./pages/login/Login";
 import Profile from "./pages/profile/Profile";
 import Register from "./pages/register/Register";
 import Landing  from "./pages/landing/Landing";
+import Aboutus from "./pages/Aboutus/aboutus";
 import {
   BrowserRouter as Router,
   Switch,
@@ -26,6 +27,9 @@ function App() {
         </Route>
         <Route path="/profile/:username">
           <Profile />
+        </Route>
+        <Route path="/aboutus">
+          <Aboutus />
         </Route>
       </Switch>
     </Router>
