@@ -22,7 +22,6 @@ PadjadjaranHub adalah aplikasi sosial media berbasis web yang mempermudah mahasi
 
 ## Classes Used
 
-
 ![UseCaseDiagram](images\UseCaseDiagram.png)
 ![SequenceDiagram](images\SequenceDiagram.png)
 ![ActivityDiagram](images\ActivityDiagram.png)
