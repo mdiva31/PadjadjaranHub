@@ -1,15 +1,10 @@
 import "./sidebar.css";
-import {
-  Home,
-  Person,
-  Group,
-
-} from "@material-ui/icons";
+import { Home, Person, Group } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import { Users } from "../../dummyData";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
-import {logoutCall} from "../../apiCalls";
+import { logoutCall } from "../../apiCalls";
 import CloseFriend from "../closeFriend/CloseFriend";
 
 export default function Sidebar() {
@@ -17,35 +12,33 @@ export default function Sidebar() {
 
   //fungsi logout
   const handleClick = () => {
-    logoutCall(
-      dispatch
-    );
-  window.location.reload()
-  }
+    logoutCall(dispatch);
+    window.location.reload();
+  };
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
-      <ul className="sidebarList">
+        <ul className="sidebarList">
           <Link to={`/`}>
-          <li className="sidebarListItem">
-            <Home className="sidebarIcon" />
-            <span className="sidebarListItemText">Home</span>
-          </li>
+            <li className="sidebarListItem">
+              <Home className="sidebarIcon" />
+              <span className="sidebarListItemText">Home</span>
+            </li>
           </Link>
           <Link to={`/profile/${user.username}`}>
-          <li className="sidebarListItem">
-            <Person className="sidebarIcon" />
-            <span className="sidebarListItemText">Profil</span>
-          </li>
+            <li className="sidebarListItem">
+              <Person className="sidebarIcon" />
+              <span className="sidebarListItemText">Profil</span>
+            </li>
           </Link>
           <Link to={`/aboutus`}>
-          <li className="sidebarListItem">
-            <Group className="sidebarIcon" />
-            <span className="sidebarListItemText">About US</span>
-          </li>
+            <li className="sidebarListItem">
+              <Group className="sidebarIcon" />
+              <span className="sidebarListItemText">About US</span>
+            </li>
           </Link>
         </ul>
-       
+
         <hr className="sidebarHr" />
         <ul className="sidebarFriendList">
           {Users.map((u) => (
