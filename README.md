@@ -18,10 +18,3 @@ PadjadjaranHub adalah aplikasi sosial media berbasis web yang mempermudah mahasi
 * User dapat menyukai dan tidak menyukai postingan sendiri dan orang lain.
 * User dapat meng-unfollow user lain yang telah di follow.
 * Setelah menggunakan PadjadjaranHub user dapat logout dan kembali ke menu halaman utama.
-
-
-## Classes Used
-
-![UseCaseDiagram](images\UseCaseDiagram.png)
-![SequenceDiagram](images\SequenceDiagram.png)
-![ActivityDiagram](images\ActivityDiagram.png)
